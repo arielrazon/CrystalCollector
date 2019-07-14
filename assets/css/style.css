@@ -1,0 +1,43 @@
+/*
+add:
+background pattern
+add coloration for 
+header box+
+body text+
+score box
+wins box
+score box
+crystals BG
+align crystals with each other
+
+*/
+
+#head {
+background-color: orangered;
+font-size: 3rem;
+}
+
+#bodyText{
+background-color: beige;
+}
+
+#goalScore{
+background-color: teal;
+}
+#crystalBox{
+display:inline-block;
+}
+
+.crystals{
+background-color: white;
+}
+
+#YourTotalScoreIs{
+    background-color:teal;
+}
+
+#scoreBox {
+background-color: teal;
+font-size:2rem;
+}
+
