@@ -12,32 +12,69 @@ align crystals with each other
 
 */
 
+body{
+    background:transparent url(../images/backgroundpattern.png); 
+    background-repeat: repeat;
+}
 #head {
 background-color: orangered;
 font-size: 3rem;
+margin:0.4rem;
+padding:0.5rem;
+width:55%;
 }
 
 #bodyText{
 background-color: beige;
+margin:0.4rem;
+width:50%;
+padding:0.4rem;
 }
 
 #goalScore{
 background-color: teal;
+font-size:2rem;
+padding:0.4rem;
+margin:0.4rem;
+width:50%;
 }
+
 #crystalBox{
 display:inline-block;
 }
 
 .crystals{
 background-color: white;
+margin:0.5rem;
+border-color: teal;
+border-width: 0.3rem;
+border: 0.3rem;
+border-style: solid;
 }
 
-#YourTotalScoreIs{
+#yourTotalScoreIs{
     background-color:teal;
+    padding:0.5rem;
+    margin:0.4rem;
+    width:50%;
 }
 
 #scoreBox {
-background-color: teal;
-font-size:2rem;
+    background-color: teal;
+    font-size:2rem;
+    padding: 0.5rem;
+    margin:0.4rem;
+    width:50%;
 }
 
+#winsLosses{
+    background-color:white;
+    padding:0.4rem;
+    margin:0.4rem;
+    width:50%;
+}
+
+p{
+    padding:0.5rem;
+   font-size:0.75rem;
+}
