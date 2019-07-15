@@ -24,7 +24,7 @@ var wins = 0 //global value of user wins
 var losses = 0 //global value of user losses 
 
 var reset = function () { //global function for resetting
-    gameScore = Math.floor(Math.random() * 100) + 25
+    newGameScore = Math.floor(Math.random() * 100) + 25
 
     crystalOneValue = Math.floor(Math.random() * 25) + 1
 
@@ -34,28 +34,51 @@ var reset = function () { //global function for resetting
 
     crystalFourValue = Math.floor(Math.random() * 25) + 1
 
-    userScore = 0
-}
-
-$("#goalScore").html(gameScore)//adds gameScore to the html div
-$("#scoreBox").html(usersScore) // adds user score to the html div
-$("#crystal1").on("click", function () { usersScore = usersScore + crystalOneValue; $("#scoreBox").html(usersScore) })
-$("#crystal2").on("click", function () { usersScore = usersScore + crystalTwoValue; $("#scoreBox").html(usersScore) })
-$("#crystal3").on("click", function () { usersScore = usersScore + crystalThreeValue; $("#scoreBox").html(usersScore) })
-$("#crystal4").on("click", function () { usersScore = usersScore + crystalFourValue; $("#scoreBox").html(usersScore) })
-
-if (usersScore === gameScore) {
-    wins++
     usersScore = 0
-    $("#winsText").html("Wins: " + wins)
-    $("#scoreBox").html(usersScore)
-
+}
+const checkScore = (x) => {
     if (usersScore > gameScore) {
         losses++
-        $("#loseText").html("Losses: " + losses)
-
-        $("#scoreBox").html(usersScore)
-
+        $("#loseText").text("Losses: " + losses)
+        $("#scoreBox").text(usersScore)
+        reset()
     }
+
+    if (usersScore = gameScore && usersScore !== 0) {
+        wins++
+        $("#winsText").text("Wins: " + wins)
+        $("#scoreBox").text(usersScore)
+        reset()
+    }
+
+    $("#goalScore").html(gameScore)//adds gameScore to the html div
+    $("#scoreBox").html(usersScore) // adds user score to the html div
+    $("#crystal1").on("click", function () {
+        usersScore = usersScore + crystalOneValue;
+        $("#scoreBox").html(usersScore);
+        checkScore()
+    })
+    $("#crystal2").on("click", function () {
+        usersScore = usersScore + crystalTwoValue;
+        $("#scoreBox").html(usersScore)
+            ;
+        checkScore()
+    })
+    $("#crystal3").on("click", function () {
+        usersScore = usersScore + crystalThreeValue;
+        $("#scoreBox").html(usersScore)
+            ;
+        checkScore()
+    })
+    $("#crystal4").on("click", function () {
+        usersScore = usersScore + crystalFourValue;
+        $("#scoreBox").html(usersScore);
+        checkScore()
+    })
+
+    
+
+
+
 
 }
