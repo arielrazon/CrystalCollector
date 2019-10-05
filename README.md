@@ -1,6 +1,6 @@
 # Crystal Collector
 
-Crystal Collector is a simple, client-side jquery-based number-matching game (a similar concept to blackjack, without the risk of gambling addiction (; )! 
+Crystal Collector is a simple, client-side jQuery-based number-matching game - think kind of like blackjack, but with crystals instead of cards and without the risk of getting a gambling addiction (; 
 
 ## Usage
 
@@ -15,4 +15,4 @@ Crystal Collector is a simple, client-side jquery-based number-matching game (a 
 ## Thanks
 
 * [Mozilla Developers Network](https://developer.mozilla.org/en-US/docs/Web/javascript)
-* [Jquery](https://jquery.com)
+* [jQuery](https://jquery.com)
